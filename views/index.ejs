@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+</head>
+<body>
+    <%- include('../partials/header.ejs') %>
+    <h2>Hello, <%= name %>!</h2>
+    <% let dogAge = age*7 %>
+    <h3>You are <%= dogAge %> in dog years.</h3>
+    <% let status %>
+    <% if (dogAge < 100) { %>
+        <% status = 'young' %> 
+    <% } else { %>
+        <% status = 'old' %> 
+    <% } %>
+    <p>This means you are <%= status %>!</p>
+</body>
+</html>
